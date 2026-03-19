@@ -1,0 +1,5 @@
+Según los resultados obtenidos con el profiler, la implementación que presentó menor tiempo de
+ejecución fue TreeMap. Sin embargo, teóricamente HashMap debería ser más rápido debido a su
+complejidad O(1), mientras que TreeMap tiene complejidad O(log n).
+Esta diferencia en los resultados puede deberse a la influencia de otras operaciones dentro del programa,
+como el uso de Scanner y otros procesos, que afectan la medición del tiempo.
