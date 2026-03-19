@@ -17,11 +17,10 @@ public class Main {
         Map<String, String> inventarioMap = MapFactory.crearMap(opcion);
 
         Inventario inventario = new Inventario(inventarioMap);
-        inventario.cargarArchivo("ListadoProducto.txt");
+        inventario.cargarArchivo("data/ListadoProducto.txt");
 
         Map<String, String> inventarioData = inventario.getInventario();
 
-        // colección del usuario
         Map<String, Integer> coleccionUsuario = new HashMap<>();
 
         int opcionMenu = 0;
@@ -46,7 +45,7 @@ public class Main {
 
                 if (inventarioData.containsKey(producto)) {
                     coleccionUsuario.put(producto,
-                        coleccionUsuario.getOrDefault(producto, 0) + 1);
+                            coleccionUsuario.getOrDefault(producto, 0) + 1);
                     System.out.println("Producto agregado.");
                 } else {
                     System.out.println("Producto no existe.");
@@ -65,8 +64,8 @@ public class Main {
             } else if (opcionMenu == 3) {
                 for (String prod : coleccionUsuario.keySet()) {
                     System.out.println(prod + " | " +
-                        inventarioData.get(prod) + " | Cantidad: " +
-                        coleccionUsuario.get(prod));
+                            inventarioData.get(prod) + " | Cantidad: " +
+                            coleccionUsuario.get(prod));
                 }
 
             } else if (opcionMenu == 4) {
@@ -74,8 +73,8 @@ public class Main {
 
                 for (String prod : ordenado.keySet()) {
                     System.out.println(prod + " | " +
-                        inventarioData.get(prod) + " | Cantidad: " +
-                        ordenado.get(prod));
+                            inventarioData.get(prod) + " | Cantidad: " +
+                            ordenado.get(prod));
                 }
 
             } else if (opcionMenu == 5) {
